@@ -1,0 +1,23 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* Estilo global para el elemento <body> de la página web */
+body{
+    /* Establece un margen superior de 20 píxeles para el contenido del cuerpo */
+    margin-top:20px;
+}
+
+/* Clase para agregar un borde superior a los elementos */
+.borde-superior{
+    /* Define un borde superior de 1 píxel de grosor y color gris claro (#ccc) */
+    border-top: 1px solid #ccc;
+    /* Agrega un relleno superior de 5 píxeles para el contenido dentro del borde */
+    padding-top:5px;
+}
+
+/* Clase para aplicar estilo a los mensajes de error */
+.error{
+    /* Establece el color del texto como rojo para indicar errores */
+    color:red;
+}

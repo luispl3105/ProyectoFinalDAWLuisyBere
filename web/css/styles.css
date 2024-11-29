@@ -1,0 +1,790 @@
+/* Estilo del cuerpo de la página principal */
+#body-index {
+    /* Imagen de fondo con ruta relativa al archivo CSS */
+    background-image: url('../img/fondoIndex.webp'); 
+    /* La imagen de fondo cubre todo el área del elemento */
+    background-size: cover;
+    /* Centra la imagen de fondo */
+    background-position: center;
+    /* No repite la imagen de fondo */
+    background-repeat: no-repeat;
+    /* Altura del elemento es igual a la altura de la ventana gráfica */
+    height: 100vh;
+    /* Uso de Flexbox para el diseño */
+    display: flex;
+    flex-direction: column;
+    /* Alinea los elementos hijos con el espacio entre ellos */
+    justify-content: space-between;
+}
+
+/* Estilo del cuerpo de la página de pintores */
+#body-pintor {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Estilo del cuerpo de la página de técnicas */
+#body-Tecnica {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Estilo del menú de navegación */
+nav {
+    /* Color de fondo negro con 80% de opacidad */
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+/* Estilo del pie de página */
+footer {
+    /* Color de fondo negro con 80% de opacidad */
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+/* Clase para el texto blanco */
+.text-white {
+    color: white;
+}
+
+/* CSS para la página de inicio de sesión */
+#body-Login {
+    /* Elimina los márgenes predeterminados */
+    margin: 0;
+    /* Imagen de fondo con ruta relativa al archivo CSS */
+    background-image: url('../img/fondoLogin.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Familia de fuentes para el texto */
+    font-family: Arial, sans-serif;
+    /* Oculta el desbordamiento del contenido */
+    overflow: hidden;
+}
+
+/* Contenedor para el formulario de inicio de sesión */
+#login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/* Fondo del contenedor de inicio de sesión */
+#login-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/fondoLogin.webp'); 
+    background-size: cover;
+    background-position: center;
+    /* Oscurece un poco el fondo */
+    filter: brightness(0.5); 
+    /* Envía este fondo detrás de otros elementos */
+    z-index: -1;
+}
+
+/* Caja de inicio de sesión */
+#login-box {
+    /* Ancho máximo de 400 píxeles */
+    max-width: 400px;
+    /* Fondo negro con 75% de opacidad */
+    background-color: rgba(0, 0, 0, 0.75); 
+    padding: 30px;
+    /* Bordes redondeados */
+    border-radius: 10px;
+    /* Sombra alrededor del contenedor */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+    /* Asegura que este contenedor esté encima del fondo */
+    z-index: 1;
+}
+
+/* Estilos para el botón personalizado */
+.btn-custom {
+    /* Color de fondo Rojo */
+    background-color: #FF0000;
+    /* Color del texto blanco */
+    color: white;
+    /* Sin borde */
+    border: none;
+    /* Bordes redondeados */
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    /* Transición suave para el cambio de color de fondo */
+    transition: background-color 0.3s ease;
+}
+
+/* Cambia el color de fondo al pasar el cursor */
+.btn-custom:hover {
+    background-color: #8B0000; /* Rojo más oscuro */
+}
+
+/* Estilos para las etiquetas de los formularios */
+label {
+    color: white; /* Letras blancas */
+}
+
+/* Estilo para los mensajes de error */
+.mensajeDeError {
+    color: red;
+}
+
+/* Botón para cerrar sesión */
+.btn-warning {
+    /* Texto blanco */
+    color: white;
+    /* Texto en negrita */
+    font-weight: bold;
+}
+
+/* CSS para la página de pintura */
+#body-pintura {
+    background-image: url('../img/fondoLogin.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Permite desplazamiento vertical si hay mucho contenido */
+    overflow-y: auto; 
+}
+
+/* Contenedor principal para la pintura */
+#pintura-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/* Fondo del contenedor de pintura */
+#pintura-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/fondoLogin.webp'); 
+    background-size: cover;
+    background-position: center;
+    /* Oscurece un poco el fondo */
+    filter: brightness(0.5); 
+    /* Envía este fondo detrás de otros elementos */
+    z-index: -1;
+}
+
+/* Caja de pintura */
+#pintura-box {
+    /* Ancho máximo de 800 píxeles */
+    max-width: 800px;
+    /* Fondo negro con 75% de opacidad */
+    background-color: rgba(0, 0, 0, 0.75); 
+    padding: 30px;
+    /* Bordes redondeados */
+    border-radius: 10px;
+    /* Sombra alrededor del contenedor */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+    /* Asegura que este contenedor esté encima del fondo */
+    z-index: 1;
+    /* Centra el contenedor horizontalmente */
+    margin: 0 auto; 
+}
+
+/* Estilo para los títulos (h1) */
+h1 {
+    /* Texto blanco */
+    color: white;
+    /* Espaciado debajo del título */
+    margin-bottom: 20px; 
+}
+
+/* Estilo para los botones informativos */
+.btn-info {
+    display: inline-block;
+    margin: 0; /* Sin margen adicional */
+    /* Texto blanco */
+    color: white;
+    /* Color de fondo azul estándar */
+    background-color: #007bff; 
+    border: none;
+    /* Bordes redondeados */
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    /* Transición suave para el cambio de color de fondo */
+    transition: background-color 0.3s ease;
+}
+
+/* Cambia el color de fondo al pasar el cursor */
+.btn-info:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Estilo para las tablas */
+table {
+    /* Ocupa todo el ancho disponible */
+    width: 100%; 
+    /* Espaciado superior */
+    margin-top: 20px;
+    /* Colapsa los bordes de las celdas */
+    border-collapse: collapse; 
+    /* Permite desplazamiento horizontal si es necesario */
+    overflow-x: auto; 
+}
+
+/* Estilo para las celdas de las tablas */
+table th, table td {
+    /* Alinea el texto al centro */
+    text-align: center;
+    /* Espaciado interno */
+    padding: 10px;
+    /* Bordes blancos alrededor de las celdas */
+    border: 1px solid white; 
+    /* Texto blanco */
+    color: white;
+}
+
+/* Estilo para los encabezados de las tablas */
+table th {
+    /* Fondo translúcido */
+    background-color: rgba(255, 255, 255, 0.2); 
+    /* Texto en negrita */
+    font-weight: bold;
+}
+
+/* Estilo alternado para las filas pares de las tablas */
+table tbody tr:nth-child(even) {
+    /* Fondo translúcido */
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+/* Estilo para las filas impares de las tablas */
+table tbody tr:nth-child(odd) {
+    /* Fondo oscuro */
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+/* Estilos para las barras de navegación y pie de página */
+nav {
+    /* Color de fondo negro con 80% de opacidad */
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+footer {
+    /* Color de fondo negro con 80% de opacidad */
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+/* Clase para el texto blanco */
+.text-white {
+    color: white;
+}
+
+/* Estilo del cuerpo de la página de pintores */
+#body-pintor {
+    /* Imagen de fondo con ruta relativa al archivo CSS */
+    background-image: url('../img/fondoLogin.webp'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Altura del elemento es igual a la altura de la ventana gráfica */
+    height: 100vh;
+    /* Uso de Flexbox para el diseño */
+    display: flex;
+    flex-direction: column;
+    /* Alinea los elementos hijos con el espacio entre ellos */
+    justify-content: space-between;
+    /* Permite desplazamiento vertical si hay mucho contenido */
+    overflow-y: auto;
+}
+
+/* Contenedor principal para los pintores */
+#pintor-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/* Fondo del contenedor de pintores */
+#pintor-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/fondoLogin.webp'); 
+    background-size: cover;
+    background-position: center;
+    /* Oscurece un poco el fondo */
+    filter: brightness(0.5); 
+    /* Envía este fondo detrás de otros elementos */
+    z-index: -1;
+}
+
+/* Caja de pintores */
+#pintor-box {
+    /* Ancho máximo de 800 píxeles */
+    max-width: 800px;
+    /* Fondo negro con 75% de opacidad */
+    background-color: rgba(0, 0, 0, 0.75); 
+    padding: 30px;
+    /* Bordes redondeados */
+    border-radius: 10px;
+    /* Sombra alrededor del contenedor */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+    /* Asegura que este contenedor esté encima del fondo */
+    z-index: 1;
+    /* Centra el contenedor horizontalmente */
+    margin: 0 auto; 
+}
+
+/* Estilo para los títulos (h1) */
+h1 {
+    /* Texto blanco */
+    color: white;
+    /* Espaciado debajo del título */
+    margin-bottom: 20px; 
+}
+
+/* Estilo para los botones informativos */
+.btn-info {
+    display: inline-block;
+    margin: 0; /* Sin margen adicional */
+    /* Texto blanco */
+    color: white;
+    /* Color de fondo azul estándar */
+    background-color: #007bff; 
+    border: none;
+    /* Bordes redondeados */
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    /* Transición suave para el cambio de color de fondo */
+    transition: background-color 0.3s ease;
+}
+
+/* Cambia el color de fondo al pasar el cursor */
+.btn-info:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Estilo para las tablas */
+table {
+    /* Ocupa todo el ancho disponible */
+    width: 100%; 
+    /* Espaciado superior */
+    margin-top: 20px;
+    /* Colapsa los bordes de las celdas */
+    border-collapse: collapse; 
+    /* Permite desplazamiento horizontal si es necesario */
+    overflow-x: auto; 
+}
+
+/* Estilo para las celdas de las tablas */
+table th, table td {
+    /* Alinea el texto al centro */
+    text-align: center;
+    /* Espaciado interno */
+    padding: 10px;
+    /* Bordes blancos alrededor de las celdas */
+    border: 1px solid white; 
+    /* Texto blanco */
+    color: white;
+}
+
+/* CSS para la página de técnica */
+#body-tecnica {
+    /* Imagen de fondo con ruta relativa al archivo CSS */
+    background-image: url('../img/fondoLogin.webp'); 
+    /* La imagen de fondo cubre todo el área del elemento */
+    background-size: cover;
+    /* Centra la imagen de fondo */
+    background-position: center;
+    /* No repite la imagen de fondo */
+    background-repeat: no-repeat;
+    /* Altura del elemento es igual a la altura de la ventana gráfica */
+    height: 100vh;
+    /* Uso de Flexbox para el diseño */
+    display: flex;
+    flex-direction: column;
+    /* Alinea los elementos hijos con el espacio entre ellos */
+    justify-content: space-between;
+    /* Permite desplazamiento vertical si hay mucho contenido */
+    overflow-y: auto; 
+}
+
+/* Contenedor principal para técnica */
+#tecnica-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/* Fondo del contenedor de técnica */
+#tecnica-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/fondoLogin.webp'); 
+    background-size: cover;
+    background-position: center;
+    /* Oscurece un poco el fondo */
+    filter: brightness(0.5); 
+    /* Envía este fondo detrás de otros elementos */
+    z-index: -1;
+}
+
+/* Caja de técnica */
+#tecnica-box {
+    /* Ancho máximo de 800 píxeles */
+    max-width: 800px;
+    /* Fondo negro con 75% de opacidad */
+    background-color: rgba(0, 0, 0, 0.75); 
+    padding: 30px;
+    /* Bordes redondeados */
+    border-radius: 10px;
+    /* Sombra alrededor del contenedor */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+    /* Asegura que este contenedor esté encima del fondo */
+    z-index: 1;
+    /* Centra el contenedor horizontalmente */
+    margin: 0 auto; 
+}
+
+/* Estilo para los títulos (h1) */
+h1 {
+    /* Texto blanco */
+    color: white;
+    /* Espaciado debajo del título */
+    margin-bottom: 20px; 
+}
+
+/* Estilo para los botones informativos */
+.btn-info {
+    display: inline-block;
+    margin: 0; /* Sin margen adicional */
+    /* Texto blanco */
+    color: white;
+    /* Color de fondo azul estándar */
+    background-color: #007bff; 
+    border: none;
+    /* Bordes redondeados */
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    /* Transición suave para el cambio de color de fondo */
+    transition: background-color 0.3s ease;
+}
+
+/* Cambia el color de fondo al pasar el cursor */
+.btn-info:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Estilo para las tablas */
+table {
+    /* Ocupa todo el ancho disponible */
+    width: 100%; 
+    /* Espaciado superior */
+    margin-top: 20px;
+    /* Colapsa los bordes de las celdas */
+    border-collapse: collapse; 
+    /* Permite desplazamiento horizontal si es necesario */
+    overflow-x: auto; 
+}
+
+/* Estilo para las celdas de las tablas */
+table th, table td {
+    /* Alinea el texto al centro */
+    text-align: center;
+    /* Espaciado interno */
+    padding: 10px;
+    /* Bordes blancos alrededor de las celdas */
+    border: 1px solid white; 
+    /* Texto blanco */
+    color: white;
+}
+
+/* Estilo para los encabezados de las tablas */
+table th {
+    /* Fondo translúcido */
+    background-color: rgba(255, 255, 255, 0.2); 
+    font-weight: bold;
+}
+
+/* Estilo alternado para las filas pares de las tablas */
+table tbody tr:nth-child(even) {
+    /* Fondo translúcido */
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+/* Estilo para las filas impares de las tablas */
+table tbody tr:nth-child(odd) {
+    /* Fondo oscuro */
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+/* Estilos para las barras de navegación y pie de página */
+nav {
+    /* Color de fondo negro con 80% de opacidad */
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+footer {
+    /* Color de fondo negro con 80% de opacidad */
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+/* Clase para el texto blanco */
+.text-white {
+    color: white;
+}
+
+
+/* CSS para nueva_pintura */
+#body-nueva-pintura {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto; /* Permite desplazamiento si hay mucho contenido */
+}
+
+#nueva-pintura-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+#nueva-pintura-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/fondoLogin.webp'); /* Ruta relativa al archivo CSS */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5); /* Oscurecer un poco */
+    z-index: -1;
+}
+
+#nueva-pintura-box {
+    max-width: 800px; /* Ajusta el ancho máximo del recuadro */
+    background-color: rgba(0, 0, 0, 0.75); /* Fondo negro transparente */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+    z-index: 1; /* Asegurarse de que el recuadro esté encima del fondo */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+
+h1 {
+    color: white; /* Texto blanco para destacar sobre el fondo oscuro */
+    margin-bottom: 20px; /* Espaciado debajo del título */
+}
+
+.btn-info {
+    display: inline-block;
+    margin: 0; /* Centrar el botón y añadir espaciado */
+    color: white;
+    background-color: #007bff; /* Azul estándar */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-info:hover {
+    background-color: #0056b3; /* Color más oscuro en hover */
+}
+
+table {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-top: 20px;
+    border-collapse: collapse; /* Para un diseño limpio */
+    overflow-x: auto; /* Desplazamiento horizontal si es necesario */
+}
+
+table th, table td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid white; /* Bordes blancos */
+    color: white; /* Texto blanco */
+}
+
+table th {
+    background-color: rgba(255, 255, 255, 0.2); /* Encabezado con fondo translúcido */
+    font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1); /* Alternar colores de fondo */
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo para filas impares */
+}
+
+/* CSS para actualizar_pintura */
+#body-actualizar-pintura {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto; /* Permite desplazamiento si hay mucho contenido */
+}
+
+#actualizar-pintura-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+#actualizar-pintura-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/fondoLogin.webp'); /* Ruta relativa al archivo CSS */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5); /* Oscurecer un poco */
+    z-index: -1;
+}
+
+#actualizar-pintura-box {
+    max-width: 800px; /* Ajusta el ancho máximo del recuadro */
+    background-color: rgba(0, 0, 0, 0.75); /* Fondo negro transparente */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+    z-index: 1; /* Asegurarse de que el recuadro esté encima del fondo */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+
+h1 {
+    color: white; /* Texto blanco para destacar sobre el fondo oscuro */
+    margin-bottom: 20px; /* Espaciado debajo del título */
+}
+
+.btn-info {
+    display: inline-block;
+    margin: 0; /* Centrar el botón y añadir espaciado */
+    color: white;
+    background-color: #007bff; /* Azul estándar */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-info:hover {
+    background-color: #0056b3; /* Color más oscuro en hover */
+}
+
+table {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-top: 20px;
+    border-collapse: collapse; /* Para un diseño limpio */
+    overflow-x: auto; /* Desplazamiento horizontal si es necesario */
+}
+
+table th, table td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid white; /* Bordes blancos */
+    color: white; /* Texto blanco */
+}
+
+table th {
+    background-color: rgba(255, 255, 255, 0.2); /* Encabezado con fondo translúcido */
+    font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1); /* Alternar colores de fondo */
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo para filas impares */
+}
+
+/* CSS para exhibicion, exposicion y galeria */
+/* Fondo del contenedor principal */
+#body-exhibicion, #body-exposicion, #body-galeria {
+    background-image: url('../img/fondoLogin.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Barra de navegación */
+nav {
+    background-color: rgba(0, 0, 0, 0.8); /* Negro con 80% de opacidad */
+}
+
+/* Pie de página */
+footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Negro con 80% de opacidad */
+}
+
+/* Texto blanco */
+.text-white {
+    color: white;
+}

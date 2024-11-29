@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Define la especificación de la versión de XML y el esquema de codificación -->
+<web-app version="3.1"
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <!-- La declaración del documento de aplicaciones web, define la versión de Java EE utilizada y el esquema asociado -->
+
+    <!-- Declaración del servlet ServletUsuario -->
+    <servlet>
+        <!-- Nombre único del servlet -->
+        <servlet-name>ServletUsuario</servlet-name>
+        <!-- Clase que implementa el servlet -->
+        <servlet-class>com.proyecto.campusjalpa.ServletUsuario</servlet-class>
+    </servlet>
+
+    <!-- Declaración del servlet ServletPinturaa -->
+    <servlet>
+        <servlet-name>ServletPinturaa</servlet-name>
+        <servlet-class>com.proyecto.campusjalpa.ServletPinturaa</servlet-class>
+    </servlet>
+
+    <!-- Declaración del servlet ServletTecnica -->
+    <servlet>
+        <servlet-name>ServletTecnica</servlet-name>
+        <servlet-class>com.proyecto.campusjalpa.ServletTecnica</servlet-class>
+    </servlet>
+
+    <!-- Declaración del servlet ServletPintor -->
+    <servlet>
+        <servlet-name>ServletPintor</servlet-name>
+        <servlet-class>com.proyecto.campusjalpa.ServletPintor</servlet-class>
+    </servlet>
+
+    <!-- Declaración del servlet LogoutServlet -->
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.proyecto.campusjalpa.LogoutServlet</servlet-class>
+    </servlet>
+
+    <!-- Mapear el servlet ServletUsuario a una URL específica -->
+    <servlet-mapping>
+        <servlet-name>ServletUsuario</servlet-name>
+        <url-pattern>/ServletUsuario</url-pattern>
+    </servlet-mapping>
+
+    <!-- Mapear el servlet ServletPinturaa a una URL específica -->
+    <servlet-mapping>
+        <servlet-name>ServletPinturaa</servlet-name>
+        <url-pattern>/ServletPinturaa</url-pattern>
+    </servlet-mapping>
+
+    <!-- Mapear el servlet ServletTecnica a una URL específica -->
+    <servlet-mapping>
+        <servlet-name>ServletTecnica</servlet-name>
+        <url-pattern>/ServletTecnica</url-pattern>
+    </servlet-mapping>
+
+    <!-- Mapear el servlet ServletPintor a una URL específica -->
+    <servlet-mapping>
+        <servlet-name>ServletPintor</servlet-name>
+        <url-pattern>/ServletPintor</url-pattern>
+    </servlet-mapping>
+
+    <!-- Mapear el servlet LogoutServlet a una URL específica -->
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Configuración de la sesión -->
+    <session-config>
+        <!-- Tiempo de espera de la sesión en minutos (30 minutos en este caso) -->
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+
+</web-app>
+
