@@ -5,12 +5,12 @@
 <%@ page language="java" import="java.util.*, com.proyecto.campusjalpa.*" contentType="text/html" pageEncoding="UTF-8" %>
 
 
-<% 
+<%
     response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
     response.setHeader("Pragma", "no-cache"); // HTTP 1.0
     response.setDateHeader("Expires", 0); // Proxies
-    
-    HttpSession userSession = request.getSession(false); 
+
+    HttpSession userSession = request.getSession(false);
     if (userSession == null || userSession.getAttribute("username") == null) {
         response.sendRedirect("login.jsp");
         return;
@@ -74,27 +74,29 @@
             if (lasTecnicas != null && lasTecnicas.size() != 0) { //si existen técnicas, mostramos la tabla                    
         %>
         <!-- tabla-->
-        <div id="tecnica-container">
+        <div id="tecnica-container" class="container-fluid">
             <div id="tecnica-background"></div>
-            <div id="tecnica-box">
+            <div id="tecnica-box" class="container-fluid">
                 <h1>Catálogo de Técnicas</h1>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% for (Tecnica tempTecnica : lasTecnicas) {
-                                out.print("<tr>");
-                                out.print("<td>" + tempTecnica.getIdTecnica() + "</td>");
-                                out.print("<td>" + tempTecnica.getTecNombre() + "</td>");
-                                out.print("</tr>");
-                            }
-                        %>                  
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for (Tecnica tempTecnica : lasTecnicas) {
+                                    out.print("<tr>");
+                                    out.print("<td>" + tempTecnica.getIdTecnica() + "</td>");
+                                    out.print("<td>" + tempTecnica.getTecNombre() + "</td>");
+                                    out.print("</tr>");
+                                }
+                            %>                  
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <%

@@ -5,12 +5,12 @@
 <%@ page language="java" import="java.util.*, com.proyecto.campusjalpa.*" contentType="text/html" pageEncoding="UTF-8" %>
 
 
-<% 
+<%
     response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
     response.setHeader("Pragma", "no-cache"); // HTTP 1.0
     response.setDateHeader("Expires", 0); // Proxies
-    
-    HttpSession userSession = request.getSession(false); 
+
+    HttpSession userSession = request.getSession(false);
     if (userSession == null || userSession.getAttribute("username") == null) {
         response.sendRedirect("login.jsp");
         return;
@@ -72,35 +72,37 @@
             if (losPintores != null && losPintores.size() != 0) {
         %>
         <!-- tabla -->
-        <div id="pintor-container">
+        <div id="pintor-container" class="container-fluid">
             <div id="pintor-background"></div>
-            <div id="pintor-box">
+            <div id="pintor-box" class="container-fluid">
                 <h1>Catálogo de Pintores</h1>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Ciudad</th>
-                            <th>Fecha de nacimiento</th>
-                            <th>Teléfono</th>
-                            <th>Correo</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% for (Pintor tempPintor : losPintores) {
-                                out.print("<tr>");
-                                out.print("<td>" + tempPintor.getIdpintor() + "</td>");
-                                out.print("<td>" + tempPintor.getNombre() + "</td>");
-                                out.print("<td>" + tempPintor.getCuidad() + "</td>");
-                                out.print("<td>" + tempPintor.getNacimiento() + "</td>");
-                                out.print("<td>" + tempPintor.getTelefono() + "</td>");
-                                out.print("<td>" + tempPintor.getCorreo() + "</td>");
-                                out.print("</tr>");
-                            }
-                        %>                  
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Ciudad</th>
+                                <th>Fecha de nacimiento</th>
+                                <th>Teléfono</th>
+                                <th>Correo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for (Pintor tempPintor : losPintores) {
+                                    out.print("<tr>");
+                                    out.print("<td>" + tempPintor.getIdpintor() + "</td>");
+                                    out.print("<td>" + tempPintor.getNombre() + "</td>");
+                                    out.print("<td>" + tempPintor.getCuidad() + "</td>");
+                                    out.print("<td>" + tempPintor.getNacimiento() + "</td>");
+                                    out.print("<td>" + tempPintor.getTelefono() + "</td>");
+                                    out.print("<td>" + tempPintor.getCorreo() + "</td>");
+                                    out.print("</tr>");
+                                }
+                            %>                  
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <%
