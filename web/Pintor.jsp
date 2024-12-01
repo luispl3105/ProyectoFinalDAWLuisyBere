@@ -72,11 +72,11 @@
             if (losPintores != null && losPintores.size() != 0) {
         %>
         <!-- tabla -->
-        <div id="pintor-container" class="container-fluid">
+        <div id="pintor-container" class="container-fluid" > 
             <div id="pintor-background"></div>
-            <div id="pintor-box" class="container-fluid">
+            <div id="pintor-box" class="container-fluid" >
                 <h1>Catálogo de Pintores</h1>
-                <div class="table-responsive">
+                <div class="table-responsive" >
                     <table class="table table-striped">
                         <thead>
                             <tr>
