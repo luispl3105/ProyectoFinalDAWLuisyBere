@@ -363,6 +363,10 @@ footer {
     z-index: 1;
     /* Centra el contenedor horizontalmente */
     margin: 0 auto; 
+    /*espacion entre el vav y el box*/
+    margin-top: 10px;
+    /*espacio entre el footer y el box*/
+    margin-bottom: 10px;
 }
 
 /* Estilo para los títulos (h1) */
@@ -787,4 +791,15 @@ footer {
 /* Texto blanco */
 .text-white {
     color: white;
+}
+/* boton de cerrar sesion*/
+.btn-warning:hover {
+    background-color: #FF0000; /* Cambiar el color del hover */
+    color: #8B0000; /* Cambiar el color del texto al pasar el cursor */
+}
+
+.nav-link.btn-warning:active {
+    background-color: #8B0000 !important; /* Rojo oscuro */
+    border-color: #8B0000 !important;    /* Opcional, para cambiar el borde */
+    color: white !important;            /* Para mantener el texto blanco */
 }

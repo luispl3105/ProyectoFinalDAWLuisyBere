@@ -1,6 +1,11 @@
 <%@ page import="javax.servlet.http.HttpSession" %>
 
+
 <%
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
+    response.setHeader("Pragma", "no-cache"); // HTTP 1.0
+    response.setDateHeader("Expires", 0); // Proxies
+    
     HttpSession userSession = request.getSession(false);
     if (userSession == null || userSession.getAttribute("username") == null) {
         response.sendRedirect("login.jsp");

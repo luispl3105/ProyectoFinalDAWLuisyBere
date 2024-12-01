@@ -35,7 +35,7 @@
 
                     <div class="form-group">
                         <label for="valorEstimado">Valor Estimado</label>
-                        <input type="number" class="form-control" min="0" name="valorEstimado" id="valorEstimado" step="0.01" required>
+                        <input type="number" class="form-control" min="0" name="valorEstimado" id="valorEstimado" max="10000000" step="0.01" required>
                     </div>
 
                     <!-- Lista de pintores obtenidos desde la base de datos -->
@@ -107,6 +107,19 @@
 
                         return true;
                     }
+
+                    //valida el valor estimado no exeda los 10000000
+                    document.getElementById('valorEstimado').addEventListener('input', function (e) {
+                        const maxValue = 10000000;
+                        const inputValue = parseFloat(e.target.value);
+
+                        if (inputValue > maxValue) {
+                            alert('El valor estimado no puede exceder de 10,000,000.');
+                            e.target.value = maxValue; // Restablece el valor al máximo permitido
+                        }
+                    });
+
+
         </script>
     </body>
 </html>
