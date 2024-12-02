@@ -32,7 +32,7 @@
         <!-- Script para confirmación de eliminación -->
         <script>
             function confirmarEliminacion(event, nombre) {
-                if (!confirm("¿Estás seguro de que deseas eliminar la pintura '" + nombre + "'?")) {
+                if (!confirm("¿Estás seguro de eliminar la pintura '" + nombre + "'?")) {
                     event.preventDefault();
                 }
             }
