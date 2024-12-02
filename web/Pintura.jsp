@@ -4,12 +4,12 @@
 <%@ page import="javax.servlet.http.HttpSession" %>
 <%@ page language="java" import="java.util.*, com.proyecto.campusjalpa.*" contentType="text/html" pageEncoding="UTF-8" %>
 
-<% 
+<%
     response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
     response.setHeader("Pragma", "no-cache"); // HTTP 1.0
     response.setDateHeader("Expires", 0); // Proxies
-    
-    HttpSession userSession = request.getSession(false); 
+
+    HttpSession userSession = request.getSession(false);
     if (userSession == null || userSession.getAttribute("username") == null) {
         response.sendRedirect("login.jsp");
         return;
@@ -76,58 +76,61 @@
             </div>
         </nav>
 
-        <div id="pintura-container">
+        <div id="pintura-container" class="container-fluid">
             <div id="pintura-background"></div>
-            <div id="pintura-box">
+            <div id="pintura-box" class="container-fluid">
                 <h1>Catálogo de Pinturas</h1>
                 <a href="ServletPinturaa?instruccion=nuevo" class="btn btn-info">Nueva Pintura</a>
                 <%
                     if (lasPinturas != null && lasPinturas.size() != 0) { //si existen pinturas, mostramos la tabla                    
                 %>
                 <!-- tabla-->
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Fecha de creación</th>
-                            <th>Valor estimado</th>
-                            <th>ID Pintor</th>
-                            <th>ID Técnica</th>
-                            <th>Actualizar</th>
-                            <th>Eliminar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% for (Pintura tempPintura : lasPinturas) {
-                                out.print("<tr>");
-                                out.print("<td>" + tempPintura.getIdPintura() + "</td>");
-                                out.print("<td>" + tempPintura.getNombre() + "</td>");
-                                out.print("<td>" + tempPintura.getFechaCreacion() + "</td>");
-                                out.print("<td>" + tempPintura.getValorEstimado() + "</td>");
-                                out.print("<td>" + tempPintura.getPintor() + "</td>");
-                                out.print("<td>" + tempPintura.getTecnica() + "</td>");
-                                //botones
-                                out.print("<td><a class='btn btn-info' href='ServletPinturaa?PIN_ID="
-                                        + tempPintura.getIdPintura() + "&instruccion=actualizar'>Modificar</a></td>");
-                                out.print("<td><a class='btn btn-warning' style='color: black;' href='ServletPinturaa?PIN_ID="
-                                        + tempPintura.getIdPintura() + "&instruccion=eliminar' onclick='confirmarEliminacion(event, \"" + tempPintura.getNombre() + "\")'>Eliminar</a></td>");
-                                out.print("</tr>");
-                            }
-                        %>                  
-                    </tbody>
-                </table>
-                <%
-                    } else {
-                        out.print("<div class='container borde-superior text-white'>");
-                        out.println("<div class='row'>");
-                        out.println("<div class='col'>");
-                        out.print("<h4>No existen Pinturas en la bd</h4>");
-                        out.print("</div></div></div>");
-                    }
-                %>
+                <div class="table-responsive" >
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Fecha de creación</th>
+                                <th>Valor estimado</th>
+                                <th>ID Pintor</th>
+                                <th>ID Técnica</th>
+                                <th>Actualizar</th>
+                                <th>Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for (Pintura tempPintura : lasPinturas) {
+                                    out.print("<tr>");
+                                    out.print("<td>" + tempPintura.getIdPintura() + "</td>");
+                                    out.print("<td>" + tempPintura.getNombre() + "</td>");
+                                    out.print("<td>" + tempPintura.getFechaCreacion() + "</td>");
+                                    out.print("<td>" + tempPintura.getValorEstimado() + "</td>");
+                                    out.print("<td>" + tempPintura.getPintor() + "</td>");
+                                    out.print("<td>" + tempPintura.getTecnica() + "</td>");
+                                    //botones
+                                    out.print("<td><a class='btn btn-info' href='ServletPinturaa?PIN_ID="
+                                            + tempPintura.getIdPintura() + "&instruccion=actualizar'>Modificar</a></td>");
+                                    out.print("<td><a class='btn btn-warning' style='color: black;' href='ServletPinturaa?PIN_ID="
+                                            + tempPintura.getIdPintura() + "&instruccion=eliminar' onclick='confirmarEliminacion(event, \"" + tempPintura.getNombre() + "\")'>Eliminar</a></td>");
+                                    out.print("</tr>");
+                                }
+                            %>                  
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
+        <%
+            } else {
+                out.print("<div class='container borde-superior text-white'>");
+                out.println("<div class='row'>");
+                out.println("<div class='col'>");
+                out.print("<h4>No existen Pinturas en la bd</h4>");
+                out.print("</div></div></div>");
+            }
+        %>
+
 
         <script src="js/jquery.slim.min.js"></script>
         <script src="js/popper.min.js"></script>
